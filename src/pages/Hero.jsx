@@ -16,7 +16,7 @@ const Hero = () => {
         Frontend Developer specializing in React applications,
         performance optimization, and scalable UI architecture.
       </p>
-
+ <p>this is a test paragraph</p>
       <a
         href="#projects"
         className="bg-sky-500 px-6 py-3 rounded-2xl hover:bg-sky-600 transition"
