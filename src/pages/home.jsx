@@ -3,7 +3,8 @@ import Navbar from "../pages/Navbar";
 import Hero from "../pages/Hero";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
-import FadeInSection from "../pages/FadeInSection"; // ✅ ADD THIS
+import FadeInSection from "../pages/FadeInSection";
+import Skills from "./Skills";
 
 const Home = () => {
   return (
@@ -11,7 +12,11 @@ const Home = () => {
       <Background />
       <Navbar />
       <Hero />
-
+      
+       <FadeInSection> 
+        <Skills />
+      </FadeInSection>
+  
       <FadeInSection>
         <Projects />
       </FadeInSection>
