@@ -1,9 +1,9 @@
-import Background from "../pages/Background";
-import Navbar from "../pages/Navbar";
-import Hero from "../pages/Hero";
-import Projects from "../pages/Projects";
-import Contact from "../pages/Contact";
-import FadeInSection from "../pages/FadeInSection";
+import Background from "./Background";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import FadeInSection from "./FadeInSection";
 import Skills from "./Skills";
 
 const Home = () => {
