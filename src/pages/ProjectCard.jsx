@@ -1,30 +1,32 @@
+import { motion } from "framer-motion";
+
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-slate-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
+    <motion.div
+      whileHover={{ y: -10 }}
+      className="bg-white/5 backdrop-blur-xl 
+      border border-white/10 
+      rounded-2xl p-6 
+      shadow-xl hover:shadow-cyan-500/10
+      transition duration-300"
+    >
+      <h3 className="text-2xl font-semibold mb-3 text-white">
+        {project.title}
+      </h3>
 
-      <p className="text-gray-400 mb-4">{project.description}</p>
-
-      <div className="flex flex-wrap gap-2 mb-4">
-        {project.tech.map((tech, index) => (
-          <span
-            key={index}
-            className="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-sm"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
+      <p className="text-gray-400 mb-4">
+        {project.description}
+      </p>
 
       <div className="flex gap-4">
-        <a href={project.github} target="_blank" className="text-sky-400">
-          GitHub
-        </a>
-        <a href={project.demo} target="_blank" className="text-sky-400">
+        <a href={project.demo} className="text-cyan-400 hover:underline">
           Live Demo
         </a>
+        <a href={project.github} className="text-indigo-400 hover:underline">
+          GitHub
+        </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

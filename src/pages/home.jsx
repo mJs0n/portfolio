@@ -1,20 +1,24 @@
-
-import Hero from "./Hero";
-import Skills from "./Skills";
-
-import Projects from "./Projects";
-import Contact from "./Contact";
-
+import Background from "../pages/Background";
+import Navbar from "../pages/Navbar";
+import Hero from "../pages/Hero";
+import Projects from "../pages/Projects";
+import Contact from "../pages/Contact";
+import FadeInSection from "../pages/FadeInSection"; // ✅ ADD THIS
 
 const Home = () => {
   return (
-    <div className="bg-slate-900 text-white">
-     
+    <div className="relative bg-slate-950 text-white overflow-hidden">
+      <Background />
+      <Navbar />
       <Hero />
-     <Skills />
-      
-      <Projects />
-      <Contact />
+
+      <FadeInSection>
+        <Projects />
+      </FadeInSection>
+
+      <FadeInSection>
+        <Contact />
+      </FadeInSection>
     </div>
   );
 };
