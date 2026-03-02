@@ -1,26 +1,53 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <motion.nav
-      initial={{ y: -80 }}
-      animate={{ y: 0 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 
-      bg-white/5 backdrop-blur-xl 
-      border border-white/10
-      px-8 py-3 rounded-full
-      flex gap-8 text-white shadow-lg"
-    >
-      <a href="#about" className="hover:text-cyan-400 transition">
-        About
-      </a>
-      <a href="#projects" className="hover:text-cyan-400 transition">
-        Projects
-      </a>
-      <a href="#contact" className="hover:text-cyan-400 transition">
-        Contact
-      </a>
-    </motion.nav>
+    <header className="navbar">
+      <div className="nav-container">
+
+        <div className="nav-logo">MJ</div>
+
+        {/* Desktop Links */}
+        <nav className="nav-links desktop">
+          <a href="#about"><span>01.</span> About</a>
+          <a href="#skills"><span>02.</span> Skills</a>
+          <a href="#projects"><span>03.</span> Projects</a>
+          <a href="#contact"><span>04.</span> Contact</a>
+        </nav>
+
+        {/* Hamburger */}
+        <div 
+          className={`hamburger ${isOpen ? "active" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </div>
+
+      {/* Mobile Dropdown */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="mobile-menu"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+            <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
+            <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+            <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 };
 

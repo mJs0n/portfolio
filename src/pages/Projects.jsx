@@ -1,15 +1,58 @@
+import { motion } from "framer-motion";
 import { projects } from "../data/projects";
-import ProjectCard from "./ProjectCard";
+import "./Projects.css";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6">
-      <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+    <section className="projects-section" id="projects">
+      <div className="projects-container">
 
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="projects-title"
+        >
+          <span className="projects-number">03.</span> Projects
+        </motion.h2>
+
+        <div className="projects-list">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="project-card"
+            >
+              <p className="project-featured">Featured Project</p>
+
+              <h3 className="project-title">{project.title}</h3>
+
+              <p className="project-description">
+                {project.description}
+              </p>
+
+              <ul className="project-tech">
+                {project.tech.map((tech, i) => (
+                  <li key={i}>{tech}</li>
+                ))}
+              </ul>
+
+              <div className="project-links">
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+                <a href={project.demo} target="_blank" rel="noreferrer">
+                  Live Demo
+                </a>
+              </div>
+
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

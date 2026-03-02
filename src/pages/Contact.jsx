@@ -1,28 +1,50 @@
+import { motion } from "framer-motion";
+import "./Contact.css";
+
 const Contact = () => {
   return (
-    <section className="py-20 px-6">
-      <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
+    <section className="contact-section" id="contact">
+      <div className="contact-container">
 
-      <form className="max-w-xl mx-auto flex flex-col gap-4">
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="p-3 rounded bg-slate-800 border border-slate-700"
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="p-3 rounded bg-slate-800 border border-slate-700"
-        />
-        <textarea
-          placeholder="Your Message"
-          className="p-3 rounded bg-slate-800 border border-slate-700"
-        />
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="contact-number"
+        >
+          04. What's Next?
+        </motion.p>
 
-        <button className="bg-sky-500 py-3 rounded-2xl hover:bg-sky-600 transition">
-          Send Message
-        </button>
-      </form>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="contact-title"
+        >
+          Get In Touch
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          viewport={{ once: true }}
+          className="contact-description"
+        >
+          I'm currently open to new opportunities and collaborations.
+          Whether you have a question or just want to say hi,
+          I’ll get back to you as soon as possible.
+        </motion.p>
+
+        <motion.a
+          href="mailto:markjasonestremos@gmail.com"
+          whileHover={{ y: -3 }}
+          className="contact-button"
+        >
+          Say Hello
+        </motion.a>
+
+      </div>
     </section>
   );
 };
