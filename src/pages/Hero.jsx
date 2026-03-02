@@ -39,7 +39,7 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="hero-description"
         >
-          I'm a frontend developer specializing in building
+          I'm a full-stack developer specializing in building
           exceptional digital experiences. Currently, I'm focused
           on building accessible, human-centered products using React.
         </motion.p>
