@@ -12,7 +12,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="hero-intro"
         >
-          Hi, my name is
+          Hi, My name is
         </motion.p>
 
         <motion.h1
@@ -39,9 +39,9 @@ const Hero = () => {
           transition={{ delay: 0.3 }}
           className="hero-description"
         >
-          I'm a full-stack developer specializing in building
-          exceptional digital experiences. Currently, I'm focused
-          on building accessible, human-centered products using React.
+           I build fast, accessible, and scalable web applications using modern
+           technologies. Passionate about clean architecture and intuitive user
+           experiences, I turn ideas into polished, production-ready products.
         </motion.p>
 
         <motion.a

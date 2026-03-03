@@ -12,7 +12,7 @@ const Contact = () => {
           viewport={{ once: true }}
           className="contact-number"
         >
-          04. What's Next?
+          What's Next?
         </motion.p>
 
         <motion.h2
