@@ -13,10 +13,10 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <nav className="nav-links desktop">
-          <a href="#about"><span>01.</span> About</a>
-          <a href="#skills"><span>02.</span> Skills</a>
-          <a href="#projects"><span>03.</span> Projects</a>
-          <a href="#contact"><span>04.</span> Contact</a>
+          <a href="#about"><span>//</span> About</a>
+          <a href="#skills"><span>//</span> Skills</a>
+          <a href="#projects"><span>//</span> Projects</a>
+          <a href="#contact"><span>//</span> Contact</a>
         </nav>
 
         {/* Hamburger */}

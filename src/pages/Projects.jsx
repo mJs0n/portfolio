@@ -13,7 +13,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="projects-title"
         >
-          <span className="projects-number">03.</span> Projects
+          <span className="projects-number">//</span> Projects
         </motion.h2>
 
         <div className="projects-list">

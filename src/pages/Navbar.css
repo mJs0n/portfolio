@@ -3,7 +3,7 @@
   width: 100%;
   top: 0;
   z-index: 100;
-  background-color: rgba(10, 25, 47, 0.9);
+  background-color: #071121;
   backdrop-filter: blur(6px);
 }
 
