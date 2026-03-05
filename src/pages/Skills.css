@@ -62,3 +62,23 @@
 .skill-card:hover .skill-icon {
   color: #64ffda;
 }
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

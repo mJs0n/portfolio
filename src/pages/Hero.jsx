@@ -30,7 +30,7 @@ const Hero = () => {
           transition={{ delay: 0.2 }}
           className="hero-tagline"
         >
-          I build things for the web.
+          I'm a full-stack developer.
         </motion.h2>
 
         <motion.p
