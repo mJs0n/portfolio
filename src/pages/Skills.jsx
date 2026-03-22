@@ -41,7 +41,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="skills-title"
         >
-          <span className="skills-number">//</span> Skills
+          <span className="skills-number">//</span> Tech Stack
         </motion.h2>
 
         <div className="skills-grid">

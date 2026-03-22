@@ -9,7 +9,7 @@
 /* Layout container */
 .hero-container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin-top: 20px;
   padding: 0 150px;
 }
 
@@ -19,6 +19,7 @@
   font-family: "SF Mono", monospace;
   font-size: 20px;
   margin-bottom: 20px;
+  margin-top: 20px;
   padding-top: 50px; ;
 }
 
@@ -66,4 +67,9 @@
 .hero-button:hover {
   background-color: rgba(100, 255, 218, 0.1);
   transform: translateY(-3px);
+}
+@media (min-width: 1025px) {
+  .hero-container {
+    margin-top: 40px;
+  }
 }

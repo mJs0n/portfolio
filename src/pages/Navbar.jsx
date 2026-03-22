@@ -13,7 +13,6 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <nav className="nav-links desktop">
-          <a href="#about"><span>//</span> About</a>
           <a href="#skills"><span>//</span> Skills</a>
           <a href="#projects"><span>//</span> Projects</a>
           <a href="#contact"><span>//</span> Contact</a>
@@ -40,7 +39,6 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
           >
-            <a href="#about" onClick={() => setIsOpen(false)}>About</a>
             <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
             <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
             <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
